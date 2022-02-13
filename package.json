@@ -1,0 +1,71 @@
+{
+  "name": "@astralis/root",
+  "version": "0.1.0",
+  "description": "Monorepo for rapid development of production grade EVM dApps.",
+  "license": "MIT",
+  "homepage": "https://github.com/pmuens/astralis#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github-pmuens:pmuens/astralis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pmuens/astralis/issues"
+  },
+  "author": {
+    "name": "Philipp Muens",
+    "url": "https://github.com/pmuens"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "smart-contracts",
+    "dapp",
+    "hardhat",
+    "next"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -pi run build",
+    "clean": "yarn workspaces foreach -pi run clean",
+    "coverage": "yarn workspaces foreach -pi run coverage",
+    "deploy": "yarn workspaces foreach -pi run deploy",
+    "dev": "yarn workspaces foreach -pi run dev",
+    "export": "yarn workspaces foreach -pi run export",
+    "format": "yarn workspaces foreach -pi run format",
+    "lint": "yarn workspaces foreach -pi run lint",
+    "lint-staged": "yarn workspaces foreach run lints",
+    "metrics": "yarn workspaces foreach -pi run metrics",
+    "test": "yarn workspaces foreach -pi run test",
+    "hardhat:build": "yarn workspace @astralis/hardhat run build",
+    "hardhat:clean": "yarn workspace @astralis/hardhat run clean",
+    "hardhat:coverage": "yarn workspace @astralis/hardhat run coverage",
+    "hardhat:deploy": "yarn workspace @astralis/hardhat run deploy",
+    "hardhat:dev": "yarn workspace @astralis/hardhat run dev",
+    "hardhat:export": "yarn workspace @astralis/hardhat run export",
+    "hardhat:format": "yarn workspace @astralis/hardhat run format",
+    "hardhat:lint": "yarn workspace @astralis/hardhat run lint",
+    "hardhat:lint-staged": "yarn workspace @astralis/hardhat run lints",
+    "hardhat:metrics": "yarn workspace @astralis/hardhat run metrics",
+    "hardhat:test": "yarn workspace @astralis/hardhat run test",
+    "hardhat:verify": "yarn workspace @astralis/hardhat run verify",
+    "next:build": "yarn workspace @astralis/next run build",
+    "next:clean": "yarn workspace @astralis/next run clean",
+    "next:deploy": "yarn workspace @astralis/next run deploy",
+    "next:dev": "yarn workspace @astralis/next run dev",
+    "next:export": "yarn workspace @astralis/next run export",
+    "next:format": "yarn workspace @astralis/next run format",
+    "next:lint": "yarn workspace @astralis/next run lint",
+    "next:lint-staged": "yarn workspace @astralis/next run lints",
+    "next:start": "yarn workspace @astralis/next run start",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable"
+  },
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "pinst": "^2.0.0"
+  }
+}

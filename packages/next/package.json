@@ -1,0 +1,44 @@
+{
+  "name": "@astralis/next",
+  "version": "0.1.0",
+  "description": "Next.js Template for EVM-based dApps.",
+  "scripts": {
+    "build": "next build",
+    "clean": "node lib/scripts/clean.js",
+    "deploy": "node lib/scripts/deploy.js",
+    "dev": "next dev",
+    "export": "next export",
+    "format": "prettier --config .prettierrc.js --write .",
+    "lint": "next lint --cache -c .eslintrc.js --fix .",
+    "lints": "lint-staged",
+    "start": "next start"
+  },
+  "author": {
+    "name": "Philipp Muens",
+    "url": "https://github.com/pmuens"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.5.3",
+    "next": "12.0.7",
+    "next-seo": "^4.28.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swr": "^1.1.2",
+    "wagmi": "^0.1.6"
+  },
+  "devDependencies": {
+    "@fleekhq/fleek-cli": "^0.1.8",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "17.0.5",
+    "@types/react": "17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "fs-extra": "^10.0.0",
+    "lint-staged": "^12.1.4",
+    "prettier": "^2.5.1",
+    "typescript": "4.5.4"
+  }
+}
